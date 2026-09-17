@@ -68,7 +68,7 @@ public class FileLogger: Logging {
         }
     }
     
-    var currentWritableFileHandle: FileHandle? {
+    private var currentWritableFileHandle: FileHandle? {
         willSet {
             if currentWritableFileHandle != newValue {
                 try? currentWritableFileHandle?.close()
